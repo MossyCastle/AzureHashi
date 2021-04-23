@@ -18,6 +18,12 @@ provider "azurerm" {
   client_secret = var.clientSecret
   tennant_id =var.tennantID
   
+/*  subscription_id = "00000000-0000-0000-0000-000000000000"
+  client_id       = "00000000-0000-0000-0000-000000000000"
+  client_secret   = var.client_secret
+  tenant_id       = "00000000-0000-0000-0000-000000000000"
+*/  
+  
   }
 
 # Create a resource group
