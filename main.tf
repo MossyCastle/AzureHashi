@@ -11,14 +11,14 @@ terraform {
 
 # Configure the Microsoft Azure Provider
 provider "azurerm" {
+  features {}
+  
   subscription_id = var.subscriptionID
   client_id = var.clientID
-  client_secret = var.clientSecre
-  tennant_id =var.tennant_ID
+  client_secret = var.clientSecret
+  tennant_id =var.tennantID
   
-  
-  features {}
-}
+  }
 
 # Create a resource group
 resource "azurerm_resource_group" "example" {
