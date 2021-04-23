@@ -14,9 +14,9 @@ provider "azurerm" {
   features {}
   
   subscription_id = "2f1d9ed6-83cf-492d-993b-ac76aa12894c"
-  client_id = var.clientID
-  client_secret = var.clientSecret
-  tennant_id =var.tennantID
+  // client_id = var.clientID
+  // client_secret = var.clientSecret
+  // tennant_id =var.tennantID
   
 /*  subscription_id = "00000000-0000-0000-0000-000000000000"
   client_id       = "00000000-0000-0000-0000-000000000000"
