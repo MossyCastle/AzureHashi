@@ -9,27 +9,20 @@ terraform {
   }
 }
 
+
+
 # Configure the Microsoft Azure Provider
 provider "azurerm" {
   features {}
   
-  //subscription_id = "c30633ef-4591-4126-8676-4b4468cc3444c"
-  // client_id = var.clientID
-  // client_secret = var.clientSecret
-  // tennant_id =var.tennantID
-  
-/*  subscription_id = "00000000-0000-0000-0000-000000000000"
-  client_id       = "00000000-0000-0000-0000-000000000000"
-  client_secret   = var.client_secret
-  tenant_id       = "00000000-0000-0000-0000-000000000000"
-*/  
+ 
   
   }
 
 # Create a resource group
 resource "azurerm_resource_group" "example" {
   name     = "mossy-example-resources"
-  location = "us-east"
+  location = "westus"
 }
 
 # Create a virtual network within the resource group
