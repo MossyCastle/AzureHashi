@@ -22,7 +22,7 @@ provider "azurerm" {
 # Create a resource group
 resource "azurerm_resource_group" "example" {
   name     = "mossy-example-resources"
-  location = "westus"
+  location = "eastus"
 }
 
 # Create a virtual network within the resource group
