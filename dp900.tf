@@ -30,8 +30,8 @@ resource "azurerm_storage_data_lake_gen2_filesystem" "DP900_moss" {
 }    
     
 // create synapse workspace
-resource "azurerm_synapse_workspace" "DP900_mosstraining" {
-  name                                 = "Moss-training"
+resource "azurerm_synapse_workspace" "dp900-mosstraining" {
+  name                                 = "mosstraining"
   resource_group_name                  = azurerm_resource_group.DP900_mossRC.name
   location                             = azurerm_resource_group.DP900_mossRC.location
   storage_data_lake_gen2_filesystem_id = azurerm_storage_data_lake_gen2_filesystem.DP900_moss.id
