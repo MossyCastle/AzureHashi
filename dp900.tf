@@ -22,7 +22,7 @@ resource "azurerm_storage_account" "DP900_moss" {
 
 resource "azurerm_storage_data_lake_gen2_filesystem" "DP900_moss" {
   name               = "example"
-  storage_account_id = azurerm_storage_account.example.id
+  storage_account_id = azurerm_storage_account.DP900_moss.id
 
   properties = {
     hello = "aGVsbG8="
@@ -49,8 +49,8 @@ resource "azurerm_synapse_workspace" "DP900-mosstraining" {
   }
 }    
     
-//  ejdcccrccihkrvtgcffnfhtdtglfljbbictdcecgnecn
+//  next create????
     
     
- // create power BI capability
+// create power BI capability
     
