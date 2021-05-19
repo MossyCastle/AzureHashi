@@ -11,9 +11,9 @@ resource "azurerm_resource_group" "DP900_mossRC" {
 //  create storage account
 
 resource "azurerm_storage_account" "DP900_moss" {
-  name                     = "examplestorageacc"
-  resource_group_name      = azurerm_resource_group.DP900_moss.name
-  location                 = azurerm_resource_group.DP900_moss.location
+  name                     = "DPP900-MossStorageAccount"
+  resource_group_name      = azurerm_resource_group.DP900_mossRC.name
+  location                 = azurerm_resource_group.DP900_mossRC.location
   account_tier             = "Standard"
   account_replication_type = "LRS"
   account_kind             = "StorageV2"
