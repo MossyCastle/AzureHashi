@@ -4,7 +4,7 @@
 */
 // create learning resource goup
 resource "azurerm_resource_group" "dp900mossRC" {
-  name     = "mossy-example-resources"
+  name     = "mossy-dp900"
   location = "eastus"
 }    
     
