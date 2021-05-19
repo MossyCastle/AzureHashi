@@ -3,26 +3,26 @@
 
 */
 // create learning resource goup
-resource "azurerm_resource_group" "DP900_mossRC" {
+resource "azurerm_resource_group" "dp900mossRC" {
   name     = "mossy-example-resources"
   location = "eastus"
 }    
     
 //  create storage account
 
-resource "azurerm_storage_account" "DP900_moss" {
+resource "azurerm_storage_account" "dp900moss" {
   name                     = "dp900storageaccount"
-  resource_group_name      = azurerm_resource_group.DP900_mossRC.name
-  location                 = azurerm_resource_group.DP900_mossRC.location
+  resource_group_name      = azurerm_resource_group.dp900_mossRC.name
+  location                 = azurerm_resource_group.dp900_mossRC.location
   account_tier             = "Standard"
   account_replication_type = "LRS"
   account_kind             = "StorageV2"
   is_hns_enabled           = "true"
 }
 
-resource "azurerm_storage_data_lake_gen2_filesystem" "DP900_moss" {
+resource "azurerm_storage_data_lake_gen2_filesystem" "dp900moss" {
   name               = "example"
-  storage_account_id = azurerm_storage_account.DP900_moss.id
+  storage_account_id = azurerm_storage_account.dp900moss.id
 
   properties = {
     hello = "aGVsbG8="
@@ -30,11 +30,11 @@ resource "azurerm_storage_data_lake_gen2_filesystem" "DP900_moss" {
 }    
     
 // create synapse workspace
-resource "azurerm_synapse_workspace" "dp900-mosstraining" {
+resource "azurerm_synapse_workspace" "dp900mosstraining" {
   name                                 = "mosstraining"
-  resource_group_name                  = azurerm_resource_group.DP900_mossRC.name
-  location                             = azurerm_resource_group.DP900_mossRC.location
-  storage_data_lake_gen2_filesystem_id = azurerm_storage_data_lake_gen2_filesystem.DP900_moss.id
+  resource_group_name                  = azurerm_resource_group.dp900mossRC.name
+  location                             = azurerm_resource_group.dp900mossRC.location
+  storage_data_lake_gen2_filesystem_id = azurerm_storage_data_lake_gen2_filesystem.dp900moss.id
   sql_administrator_login              = "sqladminuser"
   sql_administrator_login_password     = "H@Sh1CoR3!"
 
