@@ -12,8 +12,8 @@ resource "azurerm_resource_group" "dp900mossRC" {
 
 resource "azurerm_storage_account" "dp900moss" {
   name                     = "dp900storageaccount"
-  resource_group_name      = azurerm_resource_group.dp900_mossRC.name
-  location                 = azurerm_resource_group.dp900_mossRC.location
+  resource_group_name      = azurerm_resource_group.dp900mossRC.name
+  location                 = azurerm_resource_group.dp900mossRC.location
   account_tier             = "Standard"
   account_replication_type = "LRS"
   account_kind             = "StorageV2"
