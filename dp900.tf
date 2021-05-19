@@ -39,9 +39,9 @@ resource "azurerm_synapse_workspace" "dp900mosstraining" {
   sql_administrator_login_password     = "H@Sh1CoR3!"
 
   aad_admin {
-    login     = "AzureAD Admin"
-    object_id = "00000000-0000-0000-0000-000000000000"
-    tenant_id = "00000000-0000-0000-0000-000000000000"
+    login     = "Matthew Mossburg"
+    object_id = "7cce1f2d-4ec4-4ef5-bdf9-2a02607e8acf"
+    tenant_id = "2f1d9ed6-83cf-492d-993b-ac76aa12894c"
   }
 
   tags = {
