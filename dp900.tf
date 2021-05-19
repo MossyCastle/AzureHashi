@@ -11,7 +11,7 @@ resource "azurerm_resource_group" "dp900mossRC" {
 //  create storage account
 
 resource "azurerm_storage_account" "dp900moss" {
-  name                     = "dp900storageaccount"
+  name                     = "mossdp900storageaccount"
   resource_group_name      = azurerm_resource_group.dp900mossRC.name
   location                 = azurerm_resource_group.dp900mossRC.location
   account_tier             = "Standard"
@@ -31,7 +31,7 @@ resource "azurerm_storage_data_lake_gen2_filesystem" "dp900moss" {
     
 // create synapse workspace
 resource "azurerm_synapse_workspace" "dp900mosstraining" {
-  name                                 = "mosstraining"
+  name                                 = "mossdp900training"
   resource_group_name                  = azurerm_resource_group.dp900mossRC.name
   location                             = azurerm_resource_group.dp900mossRC.location
   storage_data_lake_gen2_filesystem_id = azurerm_storage_data_lake_gen2_filesystem.dp900moss.id
