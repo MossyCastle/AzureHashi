@@ -11,7 +11,7 @@ resource "azurerm_resource_group" "DP900_mossRC" {
 //  create storage account
 
 resource "azurerm_storage_account" "DP900_moss" {
-  name                     = "DPP900-MossStorageAccount"
+  name                     = "dp900storageaccount"
   resource_group_name      = azurerm_resource_group.DP900_mossRC.name
   location                 = azurerm_resource_group.DP900_mossRC.location
   account_tier             = "Standard"
