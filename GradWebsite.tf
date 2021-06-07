@@ -13,8 +13,8 @@ resource "azurerm_resource_group" "GradRG" {
     
     
 //  create storage account
-resource "azurerm_storage_account" "static_storage" {
-  name                     = "${local.env_prefix_no_separator}stor"
+resource "azurerm_storage_account" "gradwebitestorage" {
+  name                     = "Grad Website"
   resource_group_name      = azurerm_resource_group.GradRG.name
   location                 = azurerm_resource_group.GradRG.location
   account_kind             = "StorageV2"
@@ -27,7 +27,7 @@ resource "azurerm_storage_account" "static_storage" {
   }
 
   tags = {
-    product = var.product
+    product = "GradParty"
   }
 }    
     
