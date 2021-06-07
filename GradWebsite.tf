@@ -23,7 +23,7 @@ resource "azurerm_storage_account" "static_storage" {
   tags = {
     product = var.product
   }
-    
+}    
     
 //  create Webite gate way to storage accoutn
     
