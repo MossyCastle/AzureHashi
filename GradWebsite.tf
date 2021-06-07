@@ -14,7 +14,7 @@ resource "azurerm_resource_group" "GradRG" {
     
 //  create storage account
 resource "azurerm_storage_account" "gradwebitestorage" {
-  name                     = "Grad Website"
+  name                     = "gradwebsite"
   resource_group_name      = azurerm_resource_group.GradRG.name
   location                 = azurerm_resource_group.GradRG.location
   account_kind             = "StorageV2"
