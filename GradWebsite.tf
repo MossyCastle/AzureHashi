@@ -5,12 +5,18 @@
   
 // DNS name?
     
+# Create a resource group
+resource "azurerm_resource_group" "GradRG" {
+  name     = "GradPartWebsite"
+  location = "eastus"
+}
+    
     
 //  create storage account
 resource "azurerm_storage_account" "static_storage" {
   name                     = "${local.env_prefix_no_separator}stor"
-  resource_group_name      = azurerm_resource_group.MossyResourceGroup.name
-  location                 = azurerm_resource_group.MossyResourceGroup.location
+  resource_group_name      = azurerm_resource_group.GradRG.name
+  location                 = azurerm_resource_group.GradRG.location
   account_kind             = "StorageV2"
   account_tier             = "Standard"
   account_replication_type = "GRS"
