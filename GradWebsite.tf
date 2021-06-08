@@ -19,7 +19,7 @@ resource "azurerm_storage_account" "gradwebitestorage" {
   location                 = azurerm_resource_group.GradRG.location
   account_kind             = "StorageV2"
   account_tier             = "Standard"
-  account_replication_type = "GRS"
+  account_replication_type = "ZRS"
   enable_https_traffic_only = true
 
   static_website {
